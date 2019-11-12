@@ -1,22 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './share/shared.module';
+import { AppComponent } from './app.component';
+import { SearchModule } from './search/search.module';
+import { FeaturedModule } from './featured/featured.module';
+import { AppErrorComponent } from './app-error.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    SearchModule,
+    FeaturedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
